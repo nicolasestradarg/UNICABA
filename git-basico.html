@@ -121,7 +121,18 @@ git log --oneline --graph
 <span class="c"># Compartir con el remoto</span>
 git push</pre>
 
-  <h2>6. Resumen de comandos</h2>
+  <h2>6. Flujo de ramas: dev → test → pro</h2>
+  <p>En muchos equipos cada rama representa un ambiente. Los cambios avanzan de una a otra con <code>merge</code>:</p>
+  <div class="areas">
+    <div class="area"><b>dev</b><small>se desarrolla y prueba</small></div>
+    <div class="arrow">merge →</div>
+    <div class="area"><b>test</b><small>se valida antes de salir</small></div>
+    <div class="arrow">merge →</div>
+    <div class="area"><b>pro</b><small>lo que usan los usuarios</small></div>
+  </div>
+  <p class="tip">Nunca se trabaja directo en <code>pro</code>: todo cambio entra por <code>dev</code> y sube recién cuando está probado.</p>
+
+  <h2>7. Resumen de comandos</h2>
   <table>
     <tr><td><code>git init</code></td><td>Crea un repositorio en la carpeta actual.</td></tr>
     <tr><td><code>git status</code></td><td>Muestra qué archivos cambiaron y cuáles están en staging.</td></tr>
